@@ -50,10 +50,11 @@ function toggleButton() {
 }
 
 function tellMe(joke) {
+    const jokeString = joke.trim().replace(/ /g, '%20');
     VoiceRSS.speech({
         key: 'f03406148013437f843b80ba0cac716e', //personal API key got from https://www.voicerss.org/personel/
         // src: 'Hello, world!',
-        src: joke,
+        src: jokeString,
         hl: 'en-us',
         v: 'Linda',
         r: 0,
